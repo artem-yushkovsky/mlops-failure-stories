@@ -4,3 +4,5 @@ kubectl create ns mlops-af
 kubectl -n mlops-af apply -f k8s/service.yaml
 kubectl -n mlops-af apply -f k8s/ingress.yaml
 kubectl -n mlops-af apply -f k8s/deployment.yaml
+
+kubectl -n mlops-af get all,ingress
