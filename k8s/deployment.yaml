@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlopsaf
+  labels:
+    app: mlopsaf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mlopsaf
+  template:
+    metadata:
+      labels:
+        app: mlopsaf
+    spec:
+      volumes:
+        - name: sources-root
+          emptyDir: {}
+        - name: nginx-conf
+          emptyDir: {}
+      initContainers:
+        - name: git-clone
+          image: python:3.7
+          env:
+            - name: GIT_REPO
+              value: https://github.com/artem-yushkovsky/mlops-failure-stories.git
+          volumeMounts:
+            - name: sources-root
+              mountPath: /var/www/mlops.af/public
+            - name: nginx-conf
+              mountPath: /etc/nginx
+          command:
+            - "/bin/bash"
+            - "-euo"
+            - "xtrace"
+            - "-c"
+            - >-
+              cd $(mktemp -d)
+              && git clone ${GIT_REPO} .
+              && python build.py --in_md README.md --in_html_template site/template.html --out_html /var/www/mlops.af/public/index.html
+              && cp nginx.conf /etc/nginx/nginx.conf
+      containers:
+        - name: server
+          image: nginx:1.19.7
+          volumeMounts:
+            - name: sources-root
+              mountPath: /var/www/mlops.af/public
+            - name: nginx-conf
+              mountPath: /etc/nginx
