@@ -13,7 +13,7 @@ template = (Path(__file__).parent / "template.html").read_text()
 
 def update():
     response = requests.get(
-        "https://codeberg.org/hjacobs/mlops-failure-stories/raw/branch/main/README.md",
+        "https://raw.githubusercontent.com/artem-yushkovsky/mlops-failure-stories/master/README.md",
         timeout=5,
     )
     response.raise_for_status()
