@@ -25,7 +25,7 @@ Please, don't be too much scared of these horror stories, they all end well 😉
 
 # Contributing
 
-Please help the community and **[share a link to your failure story by opening a Pull Request!](https://github.com/artem-yushkovsky/mlops-failure-stories/pulls)**
+Please help the community and **[share a link to your failure story by opening a Pull Request!](https://github.com/artemlops/mlops-failure-stories/pulls)**
 Failure stories can be anything like blog posts, conference/meetup talks, incident postmortems, tweetstorms, ...
 
 # Thanks
