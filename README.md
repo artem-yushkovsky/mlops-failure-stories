@@ -13,6 +13,11 @@ MLOps is a fairly new area of software development, which can be [defined](https
 This tech field combines multiple different aspects such as ML and data pipelines, infrastructure management and DevOps, model management, and many other.
 And since this area is being currently established, the tech community eagers for the real-world horror stories to learn from!
 
+The idea to create such a page came up to us during the first Clubhouse meeting of the [AI Infrastructure Alliance](https://ai-infrastructure.org/) on March 1, 2021.
+During the discussion, we came up to the conclusion that MLOps engineering community needs a collection of failure stories similar to [k8s.af](https://k8s.af/) for Kubernetes.
+
+Please, don't be too much scared of these horror stories, they all end well 😉
+
 
 # Contributing
 
