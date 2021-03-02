@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: mlopsaf-service
+  name: mlops-af-service
 spec:
   selector:
-    app: mlopsaf
+    app: mlops-af
   ports:
   - protocol: TCP
     port: 80

@@ -4,16 +4,16 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
-  name: mlopsaf-ingress
+  name: mlops-af-ingress
 spec:
   rules:
-  - host: mlops.af
-    http:
+  - http:
       paths:
-      - backend:
-          serviceName: mlopsaf-service
+      - path: /
+        backend:
+          serviceName: mlops-af-service
           servicePort: 80
-        path: /
+
   # tls:
   # - hosts:
   #   - mlops.af

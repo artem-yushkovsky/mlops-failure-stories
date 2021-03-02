@@ -1,8 +1,0 @@
-# install ingress controller: https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/
-
-kubectl create ns mlops-af
-kubectl -n mlops-af apply -f k8s/service.yaml
-kubectl -n mlops-af apply -f k8s/ingress.yaml
-kubectl -n mlops-af apply -f k8s/deployment.yaml
-
-kubectl -n mlops-af get all,ingress
