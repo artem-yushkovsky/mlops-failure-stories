@@ -7,6 +7,10 @@ Most recent publications on top.
     * involved: fluent-bit, missing logs, Fluentd
     * impact: lost application logs in production
 
+* [What Happens to AI When the World Stops(COVID-19)? - High-level analytics page on Data Science stability](https://towardsdatascience.com/what-happens-to-ai-when-the-world-stops-covid-19-cf905a331b2f) (This is just an example from the world of BI)
+    * involved: Data Science, COVID-19
+    * impact: all failed
+
 # Why
 
 MLOps is a fairly new area of software development, which can be [defined](https://cloud.google.com/solutions/machine-learning/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning) as "continuous delivery and automation pipelines in machine learning".
